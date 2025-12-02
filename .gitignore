@@ -1,0 +1,27 @@
+# Bỏ qua thư mục môi trường ảo
+.venv/
+venv/
+env/
+
+# Bỏ qua file tạm của Python
+__pycache__/
+*.pyc
+
+# --- Cấu hình cho Model ---
+
+# 1. Đầu tiên: Bỏ qua TẤT CẢ các file .pth (để không up nhầm file rác)
+*.pth
+
+# 2. Tiếp theo: Bỏ qua toàn bộ thư mục models (để gọn gàng)
+models/
+
+# 3. QUAN TRỌNG: Dùng dấu '!' để tạo ngoại lệ (KHÔNG bỏ qua)
+# Dòng này cho phép Git nhìn thấy thư mục models
+!models/
+
+# Dòng này cho phép Git nhìn thấy thư mục con chứa model của bạn
+# (Bạn thay tên folder dài ngoằng của bạn vào đây)
+!models/model_LA_weighted_CCE_100_32_0.0001/
+
+# Dòng này cho phép Git nhìn thấy file model cụ thể bạn muốn up
+!models/model_LA_weighted_CCE_100_32_0.0001/epoch_15.pth
