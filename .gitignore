@@ -3,6 +3,8 @@
 venv/
 env/
 
+.vscode/
+
 # Bỏ qua file tạm của Python
 __pycache__/
 *.pyc
